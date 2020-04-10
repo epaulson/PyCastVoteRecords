@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<CastVoteRecordReport xmlns="NIST_V0_cast_vote_records.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CVR>
+    <CurrentSnapshotId>_cvr_snapshot_269377_001</CurrentSnapshotId>
+    <CVRSnapshot ObjectId="_cvr_snapshot_269377_001">
+      <CVRContest>
+        <ContestId>_Contest_GOV</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_GOV_Evers</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <CVRContest>
+        <ContestId>_Contest_AG</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_ag_kaul</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <Type>original</Type>
+    </CVRSnapshot>
+    <ElectionId>_fall_2018_madison_ward_9</ElectionId>
+    <UniqueId>_cvr_269377</UniqueId>
+  </CVR>
+  <CVR>
+    <CurrentSnapshotId>_cvr_snapshot_269378_001</CurrentSnapshotId>
+    <CVRSnapshot ObjectId="_cvr_snapshot_269378_001">
+      <CVRContest>
+        <ContestId>_Contest_GOV</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_GOV_Evers</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <CVRContest>
+        <ContestId>_Contest_AG</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_ag_kaul</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <Type>original</Type>
+    </CVRSnapshot>
+    <ElectionId>_fall_2018_madison_ward_9</ElectionId>
+    <UniqueId>_cvr_269378</UniqueId>
+  </CVR>
+  <CVR>
+    <CurrentSnapshotId>_cvr_snapshot_269379_001</CurrentSnapshotId>
+    <CVRSnapshot ObjectId="_cvr_snapshot_269379_001">
+      <CVRContest>
+        <ContestId>_Contest_GOV</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_GOV_Walker</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <CVRContest>
+        <ContestId>_Contest_AG</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_ag_schmiel</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <Overvotes>0</Overvotes>
+        <Undervotes>0</Undervotes>
+        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <Type>original</Type>
+    </CVRSnapshot>
+    <ElectionId>_fall_2018_madison_ward_9</ElectionId>
+    <UniqueId>_cvr_269379</UniqueId>
+  </CVR>
+  <Election ObjectId="_fall_2018_madison_ward_9">
+    <Candidate ObjectId="_GOV_Walker">
+      <Name>REP Scott Walker /Rebecca Kleefisch</Name>
+      <PartyId>_GOP</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_GOV_Evers">
+      <Name>DEM Tony Evers /Mandela Barnes</Name>
+      <PartyId>_Dem</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_GOV_Anderson">
+      <Name>LIB Phillip Anderson /Patrick Baird</Name>
+      <PartyId>_Lib</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_GOV_White">
+      <Name>WGR Michael J. White /Tiffany Anderson</Name>
+      <PartyId>_Grn</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_GOV_Turnbull">
+      <Name>IND Maggie Turnbull /Wil Losch</Name>
+    </Candidate>
+    <Candidate ObjectId="_GOV_Enz">
+      <Name>WIP Arnie Enz /No Candidate</Name>
+      <PartyId>_Wip</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_ag_schmiel">
+      <Name>REP Brad Schimel</Name>
+      <PartyId>_GOP</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_ag_kaul">
+      <Name>DEM Josh Kaul</Name>
+      <PartyId>_Dem</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_ag_larson">
+      <Name>CON Terry Larson</Name>
+      <PartyId>_Con</PartyId>
+    </Candidate>
+    <Contest ObjectId="_Contest_GOV" xsi:type="CandidateContest">
+      <ContestSelection ObjectId="_sel_GOV_Walker" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_Walker</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_Evers" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_Evers</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_Anderson" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_Anderson</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_White" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_White</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_Turnbull" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_Turnbull</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_Enz" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_Enz</CandidateIds>
+      </ContestSelection>
+      <Name>Governor / Lieutenant Governor</Name>
+      <VoteVariation>n-of-m</VoteVariation>
+      <NumberElected>1</NumberElected>
+      <VotesAllowed>1</VotesAllowed>
+    </Contest>
+    <Contest ObjectId="_Contest_AG" xsi:type="CandidateContest">
+      <ContestSelection ObjectId="_sel_ag_schmiel" xsi:type="CandidateSelection">
+        <CandidateIds>_ag_schmiel</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_ag_kaul" xsi:type="CandidateSelection">
+        <CandidateIds>_ag_kaul</CandidateIds>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_ag_larson" xsi:type="CandidateSelection">
+        <CandidateIds>_ag_larson</CandidateIds>
+      </ContestSelection>
+      <Name>Attorney General</Name>
+      <VoteVariation>n-of-m</VoteVariation>
+      <NumberElected>1</NumberElected>
+      <VotesAllowed>1</VotesAllowed>
+    </Contest>
+    <ElectionScopeId>_cvr_gp</ElectionScopeId>
+  </Election>
+  <GeneratedDate>2020-04-10T19:37:52.866436+00:00</GeneratedDate>
+  <GpUnit ObjectId="_cvr_gp">
+    <Code>
+      <Type>local-level</Type>
+      <Value>City of Madison Ward 19</Value>
+    </Code>
+    <Name>Ward 19</Name>
+    <Type>precinct</Type>
+  </GpUnit>
+  <Party ObjectId="_Dem">
+    <Abbreviation>DEM</Abbreviation>
+    <Name>Democratic</Name>
+  </Party>
+  <Party ObjectId="_GOP">
+    <Abbreviation>GOP</Abbreviation>
+    <Name>Republican</Name>
+  </Party>
+  <Party ObjectId="_Lib">
+    <Abbreviation>LIB</Abbreviation>
+    <Name>Libertarian</Name>
+  </Party>
+  <Party ObjectId="_Grn">
+    <Abbreviation>WGR</Abbreviation>
+    <Name>Wisconsin Green</Name>
+  </Party>
+  <Party ObjectId="_Wip">
+    <Abbreviation>WIP</Abbreviation>
+    <Name>The Wisconsin Party</Name>
+  </Party>
+  <Party ObjectId="_Con">
+    <Abbreviation>CON</Abbreviation>
+    <Name>Constitution</Name>
+  </Party>
+  <ReportGeneratingDeviceIds>_rpdev_ward19</ReportGeneratingDeviceIds>
+  <ReportingDevice ObjectId="_rpdev_ward19">
+    <Model>ESS DS200</Model>
+    <Notes>Reporting Device used for Madison Ward 19</Notes>
+  </ReportingDevice>
+  <Version>1.0.0</Version>
+</CastVoteRecordReport>
+
