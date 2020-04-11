@@ -5,7 +5,6 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
 import datetime
-import pytz
 
 # a helper from https://pymotw.com/2/xml/etree/ElementTree/create.html
 def prettify(elem):
@@ -330,7 +329,7 @@ class CastVoteRecordReport:
 		cvr_report.append(election_element)
 
 		generated_date_element = ET.SubElement(cvr_report, 'GeneratedDate')
-		generated_date_element.text = datetime.datetime.now(pytz.utc).isoformat()
+		generated_date_element.text = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 		gpunit_element = self.gp_unit.to_xml()
 		cvr_report.append(gpunit_element)
