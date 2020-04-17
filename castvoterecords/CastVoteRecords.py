@@ -36,6 +36,9 @@ class CVRType(Enum):
 	MODIFIED = 'modified'
 	ORIGINAL = 'original'
 
+class ContestStatus(Enum):
+	OVERVOTED = 'overvoted'
+	UNDERVOTED = 'undervoted'
 
 @dataclass
 class Code:
@@ -98,6 +101,19 @@ class ContestSelection:
 		raise NotImplemented
 
 @dataclass
+class BallotMeasureSelection(ContestSelection):
+	selection: str = None
+
+	def to_xml(self):
+		ballot_measure_sel_element = ET.Element('ContestSelection')
+		ballot_measure_sel_element.set('ObjectId', self.id)
+		ballot_measure_sel_element.set('xsi:type', 'BallotMeasureSelection')
+		ballot_measure_sel_sel_element = ET.SubElement(ballot_measure_sel_element, 'Selection')
+		ballot_measure_sel_sel_element.text = self.selection
+
+		return ballot_measure_sel_element
+
+@dataclass
 class CandidateSelection(ContestSelection):
 	candidate: Candidate = None
 	is_write_in: bool = False
@@ -108,6 +124,11 @@ class CandidateSelection(ContestSelection):
 		candidate_sel_element.set('xsi:type', 'CandidateSelection')
 		candidate_ids_element = ET.SubElement(candidate_sel_element, 'CandidateIds')
 		candidate_ids_element.text = self.candidate.id	
+
+		if self.is_write_in:
+			candidate_is_write_in_element = ET.SubElement(candidate_sel_element, 'IsWriteIn')
+			candidate_is_write_in_element.text = "true"
+
 		return candidate_sel_element
 
 @dataclass
@@ -122,6 +143,28 @@ class Contest:
 	
 	def to_xml(self):
 		raise NotImplemented
+
+@dataclass
+class BallotMeasureContest(Contest):
+	#
+	# this class doesn't have any members on its own
+	#
+
+	def to_xml(self):
+		contest_element = ET.Element('Contest')
+		contest_element.set('ObjectId', self.id)
+		contest_element.set('xsi:type', 'BallotMeasureContest')
+
+		for sel in self.contest_selections:
+			contest_element.append(sel.to_xml())
+
+		contest_name_element = ET.SubElement(contest_element, 'Name')
+		contest_name_element.text = self.name 
+		if(self.vote_variation):
+			vote_variation_element = ET.SubElement(contest_element, 'VoteVariation')
+			vote_variation_element.text = self.vote_variation.value
+
+		return contest_element
 
 @dataclass
 class CandidateContest(Contest):
@@ -180,6 +223,9 @@ class CVRContest:
 	id: str = None
 	contest: Contest = None
 	cvr_contest_selection: List[CVRContestSelection] = None
+	writeins: int = 0 
+	overvotes: int = 0
+	undervotes: int = 0
 
 	def to_xml(self):
 		cvr_contest_element = ET.Element('CVRContest')
@@ -190,13 +236,19 @@ class CVRContest:
 				cvr_contest_selection_element = cvr_contest_sel.to_xml()
 				cvr_contest_element.append(cvr_contest_selection_element)
 
-		# Todo: dont hardcode this
-		cvr_overvotes_element = ET.SubElement(cvr_contest_element, 'Overvotes')	
-		cvr_overvotes_element.text = '0'
-		cvr_undervotes_element = ET.SubElement(cvr_contest_element, 'Undervotes')	
-		cvr_undervotes_element.text = '0'
-		cvr_writeins_element = ET.SubElement(cvr_contest_element, 'WriteIns')	
-		cvr_writeins_element.text = '0'
+		if self.overvotes:
+			cvr_overvotes_element = ET.SubElement(cvr_contest_element, 'Overvotes')	
+			cvr_overvotes_element.text = str(self.overvotes)
+			cvr_status_element = ET.SubElement(cvr_contest_element, 'Status')
+			cvr_status_element.text = ContestStatus.OVERVOTED.value
+		if self.undervotes:
+			cvr_undervotes_element = ET.SubElement(cvr_contest_element, 'Undervotes')	
+			cvr_undervotes_element.text = str(self.undervotes) 
+			cvr_status_element = ET.SubElement(cvr_contest_element, 'Status')
+			cvr_status_element.text = ContestStatus.UNDERVOTED.value
+		if self.writeins:
+			cvr_writeins_element = ET.SubElement(cvr_contest_element, 'WriteIns')	
+			cvr_writeins_element.text = str(self.writeins)
 
 		# This is in the PDF but it doesn't seem to be legal
 		#cvr_total_votes_element = ET.SubElement(cvr_contest_element, 'TotalNumberVotes')	

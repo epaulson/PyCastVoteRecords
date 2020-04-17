@@ -14,9 +14,6 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
       </CVRContest>
       <CVRContest>
         <ContestId>_Contest_AG</ContestId>
@@ -29,9 +26,18 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
+      </CVRContest>
+      <CVRContest>
+        <ContestId>_Contest_Weed</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_weed_yes</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
       </CVRContest>
       <Type>original</Type>
     </CVRSnapshot>
@@ -52,9 +58,6 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
       </CVRContest>
       <CVRContest>
         <ContestId>_Contest_AG</ContestId>
@@ -67,9 +70,6 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
       </CVRContest>
       <Type>original</Type>
     </CVRSnapshot>
@@ -90,9 +90,6 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
       </CVRContest>
       <CVRContest>
         <ContestId>_Contest_AG</ContestId>
@@ -105,14 +102,37 @@
           </SelectionPosition>
           <TotalNumberVotes>1</TotalNumberVotes>
         </CVRContestSelection>
-        <Overvotes>0</Overvotes>
-        <Undervotes>0</Undervotes>
-        <WriteIns>0</WriteIns>
       </CVRContest>
       <Type>original</Type>
     </CVRSnapshot>
     <ElectionId>_fall_2018_madison_ward_9</ElectionId>
     <UniqueId>_cvr_269379</UniqueId>
+  </CVR>
+  <CVR>
+    <CurrentSnapshotId>_cvr_snapshot_269380_001</CurrentSnapshotId>
+    <CVRSnapshot ObjectId="_cvr_snapshot_269380_001">
+      <CVRContest>
+        <ContestId>_Contest_GOV</ContestId>
+        <CVRContestSelection>
+          <ContestSelectionId>_sel_GOV_write-in</ContestSelectionId>
+          <SelectionPosition>
+            <HasIndication>yes</HasIndication>
+            <IsAllocable>yes</IsAllocable>
+            <NumberVotes>1</NumberVotes>
+          </SelectionPosition>
+          <TotalNumberVotes>1</TotalNumberVotes>
+        </CVRContestSelection>
+        <WriteIns>1</WriteIns>
+      </CVRContest>
+      <CVRContest>
+        <ContestId>_Contest_AG</ContestId>
+        <Overvotes>1</Overvotes>
+        <Status>overvoted</Status>
+      </CVRContest>
+      <Type>original</Type>
+    </CVRSnapshot>
+    <ElectionId>_fall_2018_madison_ward_9</ElectionId>
+    <UniqueId>_cvr_269380</UniqueId>
   </CVR>
   <Election ObjectId="_fall_2018_madison_ward_9">
     <Candidate ObjectId="_GOV_Walker">
@@ -138,6 +158,9 @@
       <Name>WIP Arnie Enz /No Candidate</Name>
       <PartyId>_Wip</PartyId>
     </Candidate>
+    <Candidate ObjectId="_GOV_write-in">
+      <Name>write-in:</Name>
+    </Candidate>
     <Candidate ObjectId="_ag_schmiel">
       <Name>REP Brad Schimel</Name>
       <PartyId>_GOP</PartyId>
@@ -149,6 +172,9 @@
     <Candidate ObjectId="_ag_larson">
       <Name>CON Terry Larson</Name>
       <PartyId>_Con</PartyId>
+    </Candidate>
+    <Candidate ObjectId="_AG_write-in">
+      <Name>write-in:</Name>
     </Candidate>
     <Contest ObjectId="_Contest_GOV" xsi:type="CandidateContest">
       <ContestSelection ObjectId="_sel_GOV_Walker" xsi:type="CandidateSelection">
@@ -169,6 +195,10 @@
       <ContestSelection ObjectId="_sel_GOV_Enz" xsi:type="CandidateSelection">
         <CandidateIds>_GOV_Enz</CandidateIds>
       </ContestSelection>
+      <ContestSelection ObjectId="_sel_GOV_write-in" xsi:type="CandidateSelection">
+        <CandidateIds>_GOV_write-in</CandidateIds>
+        <IsWriteIn>true</IsWriteIn>
+      </ContestSelection>
       <Name>Governor / Lieutenant Governor</Name>
       <VoteVariation>n-of-m</VoteVariation>
       <NumberElected>1</NumberElected>
@@ -184,14 +214,38 @@
       <ContestSelection ObjectId="_sel_ag_larson" xsi:type="CandidateSelection">
         <CandidateIds>_ag_larson</CandidateIds>
       </ContestSelection>
+      <ContestSelection ObjectId="_sel_AG_write-in" xsi:type="CandidateSelection">
+        <CandidateIds>_AG_write-in</CandidateIds>
+        <IsWriteIn>true</IsWriteIn>
+      </ContestSelection>
       <Name>Attorney General</Name>
       <VoteVariation>n-of-m</VoteVariation>
       <NumberElected>1</NumberElected>
       <VotesAllowed>1</VotesAllowed>
     </Contest>
+    <Contest ObjectId="_Contest_Weed" xsi:type="BallotMeasureContest">
+      <ContestSelection ObjectId="_sel_weed_yes" xsi:type="BallotMeasureSelection">
+        <Selection>Yes</Selection>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_weed_no" xsi:type="BallotMeasureSelection">
+        <Selection>No</Selection>
+      </ContestSelection>
+      <Name>County Referendum re: legalize marijuana</Name>
+      <VoteVariation>n-of-m</VoteVariation>
+    </Contest>
+    <Contest ObjectId="_Contest_Tax" xsi:type="BallotMeasureContest">
+      <ContestSelection ObjectId="_sel_tax_yes" xsi:type="BallotMeasureSelection">
+        <Selection>Yes</Selection>
+      </ContestSelection>
+      <ContestSelection ObjectId="_sel_tax_no" xsi:type="BallotMeasureSelection">
+        <Selection>No</Selection>
+      </ContestSelection>
+      <Name>County Referendum re: tax loopholes</Name>
+      <VoteVariation>n-of-m</VoteVariation>
+    </Contest>
     <ElectionScopeId>_cvr_gp</ElectionScopeId>
   </Election>
-  <GeneratedDate>2020-04-10T19:37:52.866436+00:00</GeneratedDate>
+  <GeneratedDate>2020-04-17T20:47:34.696978+00:00</GeneratedDate>
   <GpUnit ObjectId="_cvr_gp">
     <Code>
       <Type>local-level</Type>
