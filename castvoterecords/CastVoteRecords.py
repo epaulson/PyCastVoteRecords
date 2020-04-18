@@ -242,10 +242,11 @@ class CVRContest:
 			cvr_status_element = ET.SubElement(cvr_contest_element, 'Status')
 			cvr_status_element.text = ContestStatus.OVERVOTED.value
 		if self.undervotes:
-			cvr_undervotes_element = ET.SubElement(cvr_contest_element, 'Undervotes')	
-			cvr_undervotes_element.text = str(self.undervotes) 
 			cvr_status_element = ET.SubElement(cvr_contest_element, 'Status')
 			cvr_status_element.text = ContestStatus.UNDERVOTED.value
+			cvr_undervotes_element = ET.SubElement(cvr_contest_element, 'Undervotes')	
+			cvr_undervotes_element.text = str(self.undervotes) 
+		# TODO: can you have under/overvotes and a writein?
 		if self.writeins:
 			cvr_writeins_element = ET.SubElement(cvr_contest_element, 'WriteIns')	
 			cvr_writeins_element.text = str(self.writeins)
