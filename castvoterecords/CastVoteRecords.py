@@ -2,18 +2,8 @@ from dataclasses import dataclass
 from typing import List
 from enum import Enum
 import xml.etree.ElementTree as ET
-from xml.dom import minidom
 
 import datetime
-
-# a helper from https://pymotw.com/2/xml/etree/ElementTree/create.html
-def prettify(elem):
-	"""Return a pretty-printed XML string for the Element.
-	"""
-	rough_string = ET.tostring(elem,'unicode')
-	reparsed = minidom.parseString(rough_string)
-	return reparsed.toprettyxml(indent="  ")
-
 
 class IdentifierType(Enum):
 	FIPS = 'fips'
@@ -400,7 +390,4 @@ class CastVoteRecordReport:
 		version_element = ET.SubElement(cvr_report, 'Version')
 		version_element.text = self.version
 
-		print(prettify(cvr_report))
-		#print(cvr_data)
-		#print(election_data)
-		#print("footer")
+		return cvr_report

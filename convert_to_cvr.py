@@ -1,4 +1,5 @@
 from castvoterecords import Code, Candidate, Party, IdentifierType, CandidateContest, VoteVariation, CandidateSelection, ContestSelection, CVRContestSelection, CVRContest, CVRSnapshot, CVR, Election, GpUnit, ReportingUnitType, CastVoteRecordReport, ReportingDevice, BallotMeasureContest, BallotMeasureSelection
+from utils import prettify
 
 import csv
 from itertools import islice
@@ -307,6 +308,8 @@ for row in islice(ward9_data, limit):
 # Finally, put the election metadata together with the ballot-level results and call it a report.
 #
 fall18_wd9_cvr_report = CastVoteRecordReport(election=fall18_wd9, cvrs = cvrs, gp_unit = ward9, reporting_device = ward9_tabulator, parties = parties)
-fall18_wd9_cvr_report.to_xml()
+fall18_xml = fall18_wd9_cvr_report.to_xml()
+
+print(prettify(fall18_xml))
 
 

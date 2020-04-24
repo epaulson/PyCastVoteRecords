@@ -1,4 +1,5 @@
 from castvoterecords import Code, Candidate, Party, IdentifierType, CandidateContest, VoteVariation, CandidateSelection, ContestSelection, CVRContestSelection, CVRContest, CVRSnapshot, CVR, Election, GpUnit, ReportingUnitType, CastVoteRecordReport, ReportingDevice, BallotMeasureContest, BallotMeasureSelection
+from utils import prettify
 
 #
 # We'll build the CVR up from the bottom. First, we'll create the political parties that appear in this CVR
@@ -136,6 +137,8 @@ cvr380 = CVR(id = '_cvr_269380', election=fall18_wd9, cvr_snapshot = [CVRSnapsho
 # Finally, put the election metadata together with the ballot-level results and call it a report.
 #
 fall18_wd9_cvr_report = CastVoteRecordReport(election=fall18_wd9, cvrs = [cvr377, cvr378, cvr379, cvr380], gp_unit = ward19, reporting_device = ward19_tabulator, parties = parties)
-fall18_wd9_cvr_report.to_xml()
+fall18_xml = fall18_wd9_cvr_report.to_xml()
+
+print(prettify(fall18_xml))
 
 
