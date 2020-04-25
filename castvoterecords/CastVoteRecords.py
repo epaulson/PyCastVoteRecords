@@ -30,6 +30,12 @@ class ContestStatus(Enum):
 	OVERVOTED = 'overvoted'
 	UNDERVOTED = 'undervoted'
 
+class AllocationStatus(Enum):
+	NO = 'no'
+	UNKNOWN = 'unknown'
+	YES = 'yes'
+
+
 @dataclass
 class Code:
 	label: str = None
